@@ -5,8 +5,139 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+    <header class="page-header">
+      <a class="index-link"  href="index.html">
+        <img class="device-logo" src="" width="145" height="36" alt="Логотип сайта device">
+      </a>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+      <nav class="navigation">
+        <ul class="navigation list">
+          <li class="navigation-item">
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="search">Поиск по сайту</label>
+              <input class="field" placeholder="Поиск по сайту" type="text" id="search" name="search" required>
+              <button class="button" type="submit">Найти</button>
+            </form>
+          </li>
+          <li class="navigation-item">
+              <a class="navigation-link" href="#">Войти</a>
+          </li>
+        </ul>
+
+        <ul class="navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Корзина</a>
+          </li>
+        </ul>
+
+        <p class="navigation-catalog">
+          <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+        </p>
+
+        <ul class="navigation-additional">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Доставка</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Гарантия</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-index">
+      <h1 class="visually-hidden">Интернет-магазин электроники «Девайс»</h1>
+      <section class="quadrocopter">
+        <h2 class="visually-hidden">Квадрокоптер</h2>
+        <img class="quadrocopter-logo" src="" alt="Квадрокоптер">
+        <b class="quadrocopter-title">Порхает как бабочка, жалит как пчела!</b>
+        <p class="quadrocopter-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+        <a class="quadrocopter-more-link" href="#">Подробнее</a>
+        <ul class="quadrocopter-list">
+          <li class="quadrocopter-item">
+            <b class="quadrocopter-distance">800 м</b>
+            <span class="quadrocopter-distance-description">Дальность полета</span>
+          </li>
+          <li class="quadrocopter-item">
+            <b class="quadrocopter-distance">50 м</b>
+            <span class="quadrocopter-distance-description">Радиус поражения</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="categories">
+        <h2 class="visually-hidden">Категории товаров</h2>
+        <ul class="categories-list">
+          <li class="categories-item">
+            <a class="categories-link" href="#">Виртуальная реальность</a>
+          </li>
+          <li class="categories-item">
+            <a class="categories-link" href="#">Моноподы для селфи</a>
+          </li>
+          <li class="categories-item">
+            <a class="categories-link" href="#">Экшн-камеры</a>
+          </li>
+          <li class="categories-item">
+            <a class="categories-link" href="#">Фитнес-браслеты</a>
+          </li>
+          <li class="categories-item">
+            <a class="categories-link" href="#">Умные часы</a>
+          </li>
+          <li class="categories-item">
+            <a class="categories-link" href="#">Квадрокоптеры</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="terms">
+        <h2 class="visually-hidden">Условия покупки</h2>
+        <ul class="terms-list">
+          <li class="terms-item">
+            <p class="terms-name">Доставка</p>
+          </li>
+          <li class="terms-item">
+            <p class="terms-name">Гарантия</p>
+          </li>
+          <li class="terms-item">
+            <p class="terms-name">Кредит</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="delivery">
+        <h2 class="delivery-title">Доставка</h2>
+        <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+      </section>
+
+      <div class="delivery-on-order">
+        <p class="delivery-on-order-description">Доставим редкий товар под заказ</p>
+      </div>
+
+      <section class="about">
+        <h2 class="about-title">О нас</h2>
+        <p class="about-description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p class="about-description">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+        <ul class="about-list">
+          <li class="about-item">
+            <p class="about-item-description">Меловые линии</p>
+          </li>
+          <li class="about-item">
+            <p class="about-item-description">СДИК</p>
+          </li>
+          <li class="about-item">
+            <p class="about-item-description">ТоксБерри</p>
+          </li>
+        </ul>
+        <a class="about-link" href="#">Подробнее о нас</a>
+      </section>
+    </main>
+
 
   </body>
 </html>
