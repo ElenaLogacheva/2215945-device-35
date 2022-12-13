@@ -46,27 +46,31 @@ body {
   font-size: 18px;
   line-height: 30px;
   color: #444444;
-  background-color: #FFFFFF;
 }
 
-.body-container {
+.white-block {
   width: 1440px;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
-
+/*
 .main-container {
   flex-grow: 1;
 }
-
+*/
 .page-header {
   margin: 0 auto;
   color: #000000;
-  background: #FFE17F;
   background: linear-gradient(to bottom, #FFFFFF 40px, #FFE17F 40px);
   width: 1160px;
   min-height: 340px;
 }
 
+.device-logo-header {
+  position: absolute;
+  top: 20px;
+  left: 300px;
+}
 .navigation {
   width: 1160px;
 }
@@ -83,9 +87,13 @@ body {
 }
 
 .field {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   padding-left: 48px;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
 }
 
 
@@ -137,8 +145,11 @@ body {
   font-weight: 400;
   padding-left: 26px;
 }
-
-.navigation-link {
+.navigation-icon-personal {
+  position: absolute;
+  top: 100px;
+}
+.navigation-link-compare {
   font-family: "Rubik", sans-serif;
   display: block;
   color: #000000;
@@ -148,7 +159,31 @@ body {
   font-weight: 400;
   padding-left: 22px;
 }
+.navigation-link-basket {
+  font-family: "Rubik", sans-serif;
+  display: block;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: 400;
+  padding-left: 43px;
+}
 
+.navigation-icon-search {
+  position: absolute;
+  top: 94px;
+  left: 314px;
+}
+
+.navigation-icon-compare {
+  position: absolute;
+  top: 100px;
+}
+.navigation-icon-basket {
+  position: absolute;
+  top: 95px;
+}
 .navigation-catalog-link {
   font-family: "Raleway", sans-serif;
   display: block;
@@ -175,4 +210,25 @@ body {
 .navigation-catalog {
   margin-left: 60px;
   margin-top: 40px;
+}
+
+.logo-01 {
+  position: absolute;
+  top: 220px;
+  right: 289px;
+}
+
+input[type=text] {
+  border: 2px solid #000000;
+  background-color: #FFE17F ;
+  border-radius: 50px 0 0 50px;
+  min-width: 359px;
+  padding-left: 48px;
+}
+
+button[type=submit] {
+  border: 2px solid #000000;
+  background-color: #FFE17F ;
+  border-radius: 0 50px 50px 0;
+  padding: 6px 66px;
 }
