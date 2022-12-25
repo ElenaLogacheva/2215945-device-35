@@ -364,6 +364,7 @@ button[type=submit] {
 
 }
 .grey-container {
+  width: auto;
   background: linear-gradient(to bottom, #FFFFFF 102px, #F0F0F0 102px);
   display: flex;
   min-height: 391px;
@@ -378,6 +379,18 @@ button[type=submit] {
   padding: 0;
   text-transform: uppercase;
   text-align: left;
+  position: relative;
+}
+.terms-list::after {
+  content:'';
+  width: 319px;
+  height: 7px;
+  background-color: #000000;
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 70px;
+  margin-left: 120px;
+
 }
 .terms-item:nth-child(1) {
   color: #FFE17F;
@@ -395,23 +408,26 @@ button[type=submit] {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  position: relative;
-  background-color: rgba(0,0,0,0);
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 153px;
+  height: 20px;
+  background-image: linear-gradient(to bottom, #F0F0F0 30%, #FFE17F 30% 70%, #F0F0F0  70%);
 }
 
-.terms-button::after {
-  position: absolute;
-  bottom: ;
-  left: ;
-  width: 160px;
-  height: 8px;
-  background: #FFE17F;
-  margin-left: -20px;
-  content: "";
+.terms-button:active {
+  width: 280px;
+  height: 40px;
+  background-image: none;
+  background-color: #000000;
+  color: #FFE17F;
 
 }
 
-
+.terms-button-delivery {
+  background-image: linear-gradient(to bottom, #FFFFFF 30%, #FFE17F 30% 70%, #FFFFFF  70%);
+}
 .terms-item:nth-child(3) {
   padding-bottom: 0;
 }
@@ -507,4 +523,93 @@ margin: 35px auto auto 39px;
 .delivery-on-order-link:focus {
   box-shadow: 0 0 0 2px #FFFFFF,
   0 0 0 4px #AF4FFF;
+}
+
+.about-contacts {
+  display: grid;
+  grid-template-columns: 520px 532px;
+  gap: 108px;
+  margin: 0;
+  padding: 0;
+  margin-top: 70px;
+}
+
+.about-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.about-description {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+}
+.about-list {
+  padding: 0;
+  margin-top: 30px;
+}
+.about-item {
+  list-style-type: none;
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 19px;
+  padding-left: 34px;
+}
+.about-item:last-child {
+  padding-bottom: 0;
+}
+
+.about-item::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFC700;
+  margin: 0;
+  top: 4px;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  content: "";
+}
+
+.about-link {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  display: block;
+  width: 270px;
+  height: 40px;
+  background-image: linear-gradient(to bottom, #FFFFFF 44%, #FFE17F 44% 56%, #FFFFFF  56%);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+.about-link:disabled {
+  opacity: 0.5;
+}
+.about-link:hover {
+  background-image: none;
+  background-color: #FFE17F;
+}
+
+.about-link:active {
+  background-color: #FFCC33;
+}
+.about-link:focus {
+  box-shadow: 0 0 0 2px #AF4FFF;
 }
