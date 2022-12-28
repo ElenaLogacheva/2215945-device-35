@@ -216,7 +216,7 @@ body {
   right: 289px;
 }
 
-input[type=text] {
+.search-field {
   border: 2px solid #000000;
   background-color: #FFE17F ;
   border-radius: 50px 0 0 50px;
@@ -224,7 +224,7 @@ input[type=text] {
   padding-left: 48px;
 }
 
-button[type=submit] {
+.search-button {
   border: 2px solid #000000;
   background-color: #FFE17F ;
   border-radius: 0 50px 50px 0;
@@ -534,11 +534,13 @@ margin: 35px auto auto 39px;
   margin-top: 70px;
 }
 
-.about-title {
+.about-title  {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
+  margin: 0;
+  margin-bottom: 48px;
 }
 
 .about-description {
@@ -590,7 +592,7 @@ margin: 35px auto auto 39px;
   color: #000000;
   text-transform: uppercase;
   display: block;
-  width: 270px;
+  min-width: 270px;
   height: 40px;
   background-image: linear-gradient(to bottom, #FFFFFF 44%, #FFE17F 44% 56%, #FFFFFF  56%);
   text-align: center;
@@ -612,4 +614,268 @@ margin: 35px auto auto 39px;
 }
 .about-link:focus {
   box-shadow: 0 0 0 2px #AF4FFF;
+}
+
+.contacts-title  {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 48px;
+}
+
+.contacts-description {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+}
+
+.contacts-shop-title {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+
+}
+.contacts-shop-hours-title {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.phone-link {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+}
+
+.shop-hours-list {
+  list-style-type: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  padding: 0;
+}
+.shop-hours-item {
+  margin: 0;
+}
+.shop-hours-description {
+  margin: 0;
+}
+
+.writing-link {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  display: block;
+  min-width: 259px;
+  height: 40px;
+  background-image: linear-gradient(to bottom, #FFFFFF 44%, #FFE17F 44% 56%, #FFFFFF  56%);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.writing-link:disabled {
+  opacity: 0.5;
+}
+.writing-link:hover {
+  background-image: none;
+  background-color: #FFE17F;
+}
+
+.writing-link:active {
+  background-color: #FFCC33;
+}
+
+.writing-link:focus {
+  box-shadow: 0 0 0 2px #AF4FFF;
+}
+
+.booking {
+  background-color: #F0F0F0;
+}
+
+.booking-about {
+  display: flex;
+}
+
+.booking-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+  margin-top: 64px;
+  margin-right: 252px;
+}
+.booking-description {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  margin-top: 74px;
+}
+
+.booking-bottom {
+  display: flex;
+}
+.booking-form {
+  display: flex;
+}
+.booking-field {
+  display: block;
+  box-sizing: border-box;
+  min-width: 557px;
+  height: 52px;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  background-color: #F0F0F0;
+  margin-top: 145px;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-bottom: 56px;
+  outline: 0;
+}
+.booking-field:valid {
+  color: #000000;
+}
+.booking-field:active {
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  background-color: #F0F0F0;
+}
+
+.booking-field:focus {
+  background-color: #DCDCDC;
+  border: none;
+}
+.booking-field:invalid {
+  border: none;
+  border-bottom: 3px solid #FF3D3D;
+  background-color: #F0F0F0;
+}
+.booking-field:disabled {
+  opacity: 0.5;
+}
+.booking-button {
+  display: block;
+  min-width: 247px;
+  height: 56px;
+  border: 3px solid #C4C4C4;
+  background-color: #F0F0F0;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  margin-top: 141px;
+}
+.booking-button:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+.booking-button:active {
+  color: #EBEBEB;
+  background-color: #000000;
+}
+.booking-button:focus {
+  box-shadow: 0 0 0 2px #FFFFFF,
+  0 0 0 2px #AF4FFF;
+}
+.booking-button:disabled {
+  opacity: 0.5;
+}
+.booking-text {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  margin-left: 189px;
+  margin-top: 157px;
+  padding-left: 30px;
+  background-image: url("../images/check-mark.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-position: top 10% left;
+}
+.dark-grey-container {
+  background-color: #444444;
+}
+.page-footer {
+  margin: 0 auto;
+  color: #FFFFFF;
+  width: 1160px;
+}
+.device-link-yellow {
+  display: block;
+  width: 145px;
+  height: 36px;
+  margin-top: 62px;
+  margin-bottom: 32px;
+}
+
+.device-logo-yellow:hover {
+  opacity: 0.75;
+}
+.device-logo-yellow:active {
+  opacity: 0.5;
+}
+.device-link-yellow:focus {
+  padding: 1px;
+  border: 2px solid #AF4FFF;
+}
+
+.footer-top {
+  display: flex;
+}
+.adress-description {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 124px;
+}
+.conditions-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.conditions-link {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+.conditions-link:last-child {
+  margin-right: 0;
 }
