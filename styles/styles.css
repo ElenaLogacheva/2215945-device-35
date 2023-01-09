@@ -50,11 +50,6 @@ body {
   background-color: #FFFFFF;
 }
 
-/*
-.main-container {
-  flex-grow: 1;
-}
-*/
 
 .page-header {
   margin: 0 auto;
@@ -105,9 +100,9 @@ body {
 }
 .search-form {
   display: flex;
+  display: relative;
 }
 .search-field {
-  position: relative;
   display: block;
   width: 311px;
   height: 40px;
@@ -133,15 +128,17 @@ body {
 .search-form:focus-within {
   border: 2px solid #AF4FFF;
   padding: 2px;
+  margin: -4px;
 }
+
 .navigation-icon-search {
   position: absolute;
-  z-index: 1;
   top: 135px;
   left: 230px;
   right: 0;
   bottom: 0;
 }
+
 .search-button {
   display: block;
   width: 160px;
@@ -280,6 +277,7 @@ body {
 .navigation-item:focus-within {
   border: 2px solid #AF4FFF;
   padding: 2px;
+  margin: -4px;
 }
 .navigation-item-compare:focus-within {
   padding-right: 5px;
@@ -297,6 +295,7 @@ body {
   margin: 0;
   padding: 0;
   margin-left: 60px;
+  margin-top: 43px;
 }
 .navigation-catalog-title {
   font-family: "Raleway", sans-serif;
@@ -306,7 +305,7 @@ body {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-  margin-top: 50px;
+  margin-top: 14px;
 
 }
 .navigation-catalog-button {
@@ -319,7 +318,6 @@ body {
   opacity: 0.3;
   background-color: #FFE17F;
   margin-left: 7px;
-  margin-top: 35px;
   cursor: pointer;
   padding: 0;
 }
@@ -431,12 +429,13 @@ body {
 .white-container {
   background: linear-gradient(to bottom, #FFE17F 30px, #FFFFFF 30px);
   width: 1160px;
+  margin: 0 auto;
 }
 
 .main-index {
   margin: 0 auto;
   color: #000000;
-  width: 1160px;
+  width: 100%;
 }
 
 .quadrocopter {
@@ -445,12 +444,27 @@ body {
   padding: 0;
 }
 
+.slider-wrapper {
+  position: relative;
+}
+
 .quadrocopter-logo {
   margin-top: -120px;
   margin-right: 40px;
   display: block;
 }
 
+.slider-controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 90px;
+  width: 540px;
+  margin-left: 30px;
+  /*
+  transform: translateY(-50%);
+  */
+}
 .slider-button {
   width: 20px;
   height: 60px;
@@ -518,6 +532,21 @@ body {
   text-align: center;
   padding-top: 20px;
 }
+
+.quadrocopter-more-link:hover {
+  background-color: #FFE17F;
+  background-image: none;
+}
+
+.quadrocopter-more-link:active {
+  background-color: #FFCC33;
+  background-image: none;
+}
+
+.quadrocopter-more-link:focus {
+  border: 2px solid #AF4FFF;
+}
+
 .quadrocopter-list {
   list-style-type: none;
   display: flex;
@@ -644,11 +673,16 @@ body {
   margin-top: 30px;
 
 }
-.grey-container {
+.grey-container-first {
   width: auto;
   background: linear-gradient(to bottom, #FFFFFF 102px, #F0F0F0 102px);
-  display: flex;
   min-height: 391px;
+}
+
+.grey-container-terms {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
 }
 .terms-list {
   list-style-type: none;
@@ -695,19 +729,26 @@ body {
   width: 153px;
   height: 20px;
   background-image: linear-gradient(to bottom, #F0F0F0 30%, #FFE17F 30% 70%, #F0F0F0  70%);
+  cursor: pointer;
 }
 
-.terms-button:active {
-  width: 280px;
-  height: 40px;
+.terms-button-current {
+  position: relative;
   background-image: none;
   background-color: #000000;
   color: #FFE17F;
-
+  z-index: 0;
 }
+.terms-button-current::before {
+  position: absolute;
+  content:'';
+  width: 280px;
+  height: 40px;
+  background-color: #000000;
+  z-index: -1;
+  left: 0;
+  top: -50%;
 
-.terms-button-delivery {
-  background-image: linear-gradient(to bottom, #FFFFFF 30%, #FFE17F 30% 70%, #FFFFFF  70%);
 }
 .terms-item:nth-child(3) {
   padding-bottom: 0;
@@ -740,6 +781,11 @@ body {
   padding: 0;
   padding-top: 77px;
   padding-left: 110px;
+}
+
+.white-container-second {
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .delivery-on-order-link {
@@ -778,8 +824,17 @@ margin: 35px auto auto 39px;
   left: 0;
   margin: auto;
   margin-right: 44px;
+  z-index: 0;
 }
-
+.delivery-on-order-logo-i::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #DCDCDC;
+  position: absolute;
+  z-index: -1;
+}
 .delivery-on-order-link:hover {
   background: linear-gradient(to right, #FFC700 125px, #F0F0F0 125px);
 }
@@ -983,8 +1038,13 @@ margin: 35px auto auto 39px;
   box-shadow: 0 0 0 2px #AF4FFF;
 }
 
-.booking {
+.grey-container-second {
+  width: auto;
   background-color: #F0F0F0;
+}
+.grey-container-booking {
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .booking-about {
@@ -1139,6 +1199,7 @@ margin: 35px auto auto 39px;
   padding: 0;
   margin: 0;
   margin-top: 20px;
+  margin-left: 35px;
 }
 .conditions-link {
   text-decoration: none;
