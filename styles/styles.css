@@ -100,7 +100,6 @@ body {
 }
 .search-form {
   display: flex;
-  display: relative;
 }
 .search-field {
   display: block;
@@ -117,6 +116,9 @@ body {
   border-radius: 50px 0 0 50px;
   padding-left: 48px;
   outline: 0;
+  background-image: url("/images/search.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 13px;
 }
 
 .search-field:valid {
@@ -129,14 +131,6 @@ body {
   border: 2px solid #AF4FFF;
   padding: 2px;
   margin: -4px;
-}
-
-.navigation-icon-search {
-  position: absolute;
-  top: 135px;
-  left: 230px;
-  right: 0;
-  bottom: 0;
 }
 
 .search-button {
@@ -474,7 +468,7 @@ body {
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../images/arrow-next.svg");
+  background-image: url("/images/arrow-next.svg");
 }
 
 .slider-button:hover {
@@ -631,7 +625,6 @@ body {
   width: 160px;
   height: 160px;
   background-color: #FFE17F;
-
 }
 
 .categories-link:hover {
@@ -713,7 +706,7 @@ body {
 }
 .terms-item {
   padding: 0;
-  padding-bottom: 55px;
+  margin-bottom: 55px;
 }
 
 .terms-button {
@@ -748,7 +741,18 @@ body {
   z-index: -1;
   left: 0;
   top: -50%;
+}
 
+.terms-button-current:hover {
+  text-align: end;
+}
+.terms-button-current:active {
+  text-align: end;
+}
+.terms-button-current:focus::before {
+  border: 2px solid #AF4FFF;
+  padding: 2px;
+  margin: -6px;
 }
 .terms-item:nth-child(3) {
   padding-bottom: 0;
@@ -805,7 +809,16 @@ body {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
-
+}
+.delivery-on-order-link::after{
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 50%;
+  right: 25px;
+  top: 32px;
 }
 .delivery-on-order-logo {
 position: absolute;
@@ -814,6 +827,7 @@ right: 0;
 bottom: 0;
 left: 0;
 margin: 35px auto auto 39px;
+
 }
 
 .delivery-on-order-logo-i {
@@ -824,23 +838,16 @@ margin: 35px auto auto 39px;
   left: 0;
   margin: auto;
   margin-right: 44px;
-  z-index: 0;
+  fill: #000000;
+  opacity: 0.3;
 }
-.delivery-on-order-logo-i::after {
-  content: '';
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #DCDCDC;
-  position: absolute;
-  z-index: -1;
-}
+
 .delivery-on-order-link:hover {
   background: linear-gradient(to right, #FFC700 125px, #F0F0F0 125px);
 }
-
-.delivery-on-order-link:hover .delivery-on-order-logo-i {
-  fill:#000000;
+.delivery-on-order-link:hover .delivery-on-order-logo-i  {
+  fill: #000000;
+  opacity: 1;
 }
 
 .delivery-on-order-link:active {
@@ -1152,7 +1159,7 @@ margin: 35px auto auto 39px;
   margin-left: 189px;
   margin-top: 157px;
   padding-left: 30px;
-  background-image: url("../images/check-mark.svg");
+  background-image: url("/images/check-mark.svg");
   background-repeat: no-repeat;
   background-size: 14px 14px;
   background-position: top 10% left;
